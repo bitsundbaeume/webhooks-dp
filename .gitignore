@@ -1,2 +1,2 @@
 # .gitignore
-.github_webhook_secret.txt
+.build_branch_webhook_secret.txt
