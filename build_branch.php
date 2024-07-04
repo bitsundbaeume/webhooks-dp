@@ -9,13 +9,28 @@
  */
 $webhook_secret_path = '/var/www/webhooks/webhooksecrets/build_bubweb_branch_webhook_secret.txt'; 
 
-// Lade das Hook Secret aus der Datei
-$webhook_secret = file_get_contents($webhook_secret_path);
 
-// Überprüfe, ob das Laden des Secrets erfolgreich war
-if ($webhook_secret === false) {
-    die("Could not read the hook secret file.");
+if (file_exists($webhook_secret_path)) {
+    // Lese den Inhalt der Datei
+    $fileContent = file_get_contents($filePath);
+    
+    // Überprüfe, ob das Lesen der Datei erfolgreich war
+    if ($fileContent !== false) {
+        // Gib den Inhalt der Datei aus
+        echo "Der Inhalt der Datei ist: " . $fileContent;
+    } else {
+        echo "Fehler beim Lesen der Datei.";
+    }
+} else {
+    echo "Datei existiert nicht.";
 }
+
+
+
+
+// Lade das Hook Secret aus der Datei
+$webhook_secret = $fileContent
+
 
 // Entferne mögliche unerwünschte Leerzeichen oder Zeilenumbrüche
 $webhook_secret = trim($webhook_secret);
