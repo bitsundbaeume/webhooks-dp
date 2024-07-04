@@ -7,7 +7,7 @@
  * @source  https://gist.github.com/milo/daed6e958ea534e4eba3
  * Edited by @b3nks for @bitsundbaeume22
  */
-$webhook_secret_path = '.build_branch_webhook_secret.txt'; 
+$webhook_secret_path = './.build_branch_webhook_secret.txt'; 
 
 // Lade das Hook Secret aus der Datei
 $webhook_secret = file_get_contents($webhook_secret_path);
