@@ -12,7 +12,7 @@ $webhook_secret_path = '/var/www/webhooks/webhooksecrets/build_bubweb_branch_web
 
 if (file_exists($webhook_secret_path)) {
     // Lese den Inhalt der Datei
-    $fileContent = file_get_contents($filePath);
+    $fileContent = file_get_contents($webhook_secret_path);
     
     // Überprüfe, ob das Lesen der Datei erfolgreich war
     if ($fileContent !== false) {
