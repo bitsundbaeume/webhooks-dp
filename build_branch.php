@@ -25,7 +25,7 @@ if (file_exists($webhook_secret_path)) {
     echo "Datei existiert nicht.";
 }
 
-
+die("ende");
 
 
 // Lade das Hook Secret aus der Datei
